@@ -22,9 +22,12 @@ public class SimpleGridTest {
     @Test
     public void shouldGetGoogleTitle() {
         driver.get("http://www.google.pl");
-        driver.get("http://www.bol.com");
         String title = driver.getTitle();
         assert (title.contains("Google"));
+
+        driver.get("http://www.bol.com");
+        title = driver.getTitle();
+        assert (title.contains("bol.com"));
     }
 
     @After
