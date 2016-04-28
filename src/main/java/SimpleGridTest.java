@@ -1,6 +1,7 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -28,6 +29,8 @@ public class SimpleGridTest {
         driver.get("http://www.bol.com");
         title = driver.getTitle();
         assert (title.contains("bol.com"));
+
+        driver.findElement(By.linkText("Boeken")).click();
     }
 
     @After
